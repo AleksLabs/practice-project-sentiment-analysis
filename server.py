@@ -13,7 +13,7 @@ def sent_analyzer():
     result = sentiment_analyzer(text_to_analyze)
     label = result["label"]
     score = result["score"]
-    return f"The given text has been identified as {label.split("_")[1]} with a score of {score}."
+    return f"The given text has been identified as {label.split('_')[1]} with a score of {score}."
     ''' This code receives the text from the HTML interface and 
         runs sentiment analysis over it using sentiment_analysis()
         function. The output returned shows the label and its confidence 
