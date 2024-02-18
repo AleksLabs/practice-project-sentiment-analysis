@@ -1,8 +1,11 @@
+"""Sentiment analysis testing module"""
 import unittest
 from SentimentAnalysis.sentiment_analysis import sentiment_analyzer
 
 class TestSentimentAnalyzer(unittest.TestCase):
+    """Sentiment analysis testing class"""
     def test_sentiment_analyzer(self):
+        """Sentiment analysis testing function"""
         test_1 = "I love working with Python"
         intended_result_1 = "SENT_POSITIVE"
         test_2 = "I hate working with Pyhton"
