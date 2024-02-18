@@ -9,17 +9,17 @@ app = Flask("Sentiment Analyzer")
 
 @app.route("/sentimentAnalyzer")
 def sent_analyzer():
-    text_to_analyze = request.arg.get("textToAnalyze")
+    text_to_analyze = request.args.get("textToAnalyze")
     result = sentiment_analyzer(text_to_analyze)
-    return result
+    label = result["label"]
+    score = result["score"]
+    return f"The given text has been identified as {label.split("_")[1]} with a score of {score}."
     ''' This code receives the text from the HTML interface and 
         runs sentiment analysis over it using sentiment_analysis()
         function. The output returned shows the label and its confidence 
         score for the provided text.
     '''
     
-    
-
 @app.route("/")
 def render_index_page():
     ''' This function initiates the rendering of the main application
